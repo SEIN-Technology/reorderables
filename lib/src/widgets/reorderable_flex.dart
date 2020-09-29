@@ -942,52 +942,53 @@ class _ReorderableFlexContentState extends State<_ReorderableFlexContent>
 ///
 ///  * [ReorderableColumn], for a version of this widget that is always vertical.
 class ReorderableRow extends ReorderableFlex {
-  ReorderableRow({
-    Key key,
-    Widget header,
-    Widget footer,
-    ReorderCallback onReorder,
-    EdgeInsets padding,
-    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
-    MainAxisSize mainAxisSize = MainAxisSize.max,
-    CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
-    TextDirection textDirection,
-    VerticalDirection verticalDirection = VerticalDirection.down,
-    TextBaseline textBaseline,
-    List<Widget> children = const <Widget>[],
-    BuildDraggableFeedback buildDraggableFeedback,
-    NoReorderCallback onNoReorder,
-    ScrollController scrollController,
-    bool needsLongPressDraggable = true,
-    double draggingWidgetOpacity = 0.2,
-  }) : super(
-          key: key,
-          header: header,
-          footer: footer,
-          children: children,
-          onReorder: onReorder,
-          onNoReorder: onNoReorder,
-          direction: Axis.horizontal,
-          scrollDirection: Axis.horizontal,
-          padding: padding,
-          buildItemsContainer:
-              (BuildContext context, Axis direction, List<Widget> children) {
-            return Flex(
-                direction: direction,
-                mainAxisAlignment: mainAxisAlignment,
-                mainAxisSize: mainAxisSize,
-                crossAxisAlignment: crossAxisAlignment,
-                textDirection: textDirection,
-                verticalDirection: verticalDirection,
-                textBaseline: textBaseline,
-                children: children);
-          },
-          buildDraggableFeedback: buildDraggableFeedback,
-          mainAxisAlignment: mainAxisAlignment,
-          scrollController: scrollController,
-          needsLongPressDraggable: needsLongPressDraggable,
-          draggingWidgetOpacity: draggingWidgetOpacity,
-        );
+  ReorderableRow(
+      {Key key,
+      Widget header,
+      Widget footer,
+      ReorderCallback onReorder,
+      EdgeInsets padding,
+      MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
+      MainAxisSize mainAxisSize = MainAxisSize.max,
+      CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
+      TextDirection textDirection,
+      VerticalDirection verticalDirection = VerticalDirection.down,
+      TextBaseline textBaseline,
+      List<Widget> children = const <Widget>[],
+      BuildDraggableFeedback buildDraggableFeedback,
+      NoReorderCallback onNoReorder,
+      ScrollController scrollController,
+      bool needsLongPressDraggable = true,
+      double draggingWidgetOpacity = 0.2,
+      ScrollPhysics physics})
+      : super(
+            key: key,
+            header: header,
+            footer: footer,
+            children: children,
+            onReorder: onReorder,
+            onNoReorder: onNoReorder,
+            direction: Axis.horizontal,
+            scrollDirection: Axis.horizontal,
+            padding: padding,
+            buildItemsContainer:
+                (BuildContext context, Axis direction, List<Widget> children) {
+              return Flex(
+                  direction: direction,
+                  mainAxisAlignment: mainAxisAlignment,
+                  mainAxisSize: mainAxisSize,
+                  crossAxisAlignment: crossAxisAlignment,
+                  textDirection: textDirection,
+                  verticalDirection: verticalDirection,
+                  textBaseline: textBaseline,
+                  children: children);
+            },
+            buildDraggableFeedback: buildDraggableFeedback,
+            mainAxisAlignment: mainAxisAlignment,
+            scrollController: scrollController,
+            needsLongPressDraggable: needsLongPressDraggable,
+            draggingWidgetOpacity: draggingWidgetOpacity,
+            physics: physics);
 }
 
 /// Reorderable (drag and drop) version of [Column], a widget that displays its
@@ -1016,49 +1017,50 @@ class ReorderableRow extends ReorderableFlex {
 ///
 ///  * [ReorderableRow], for a version of this widget that is always horizontal.
 class ReorderableColumn extends ReorderableFlex {
-  ReorderableColumn({
-    Key key,
-    Widget header,
-    Widget footer,
-    ReorderCallback onReorder,
-    EdgeInsets padding,
-    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
-    MainAxisSize mainAxisSize = MainAxisSize.max,
-    CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
-    TextDirection textDirection,
-    VerticalDirection verticalDirection = VerticalDirection.down,
-    TextBaseline textBaseline,
-    List<Widget> children = const <Widget>[],
-    BuildDraggableFeedback buildDraggableFeedback,
-    NoReorderCallback onNoReorder,
-    ScrollController scrollController,
-    bool needsLongPressDraggable = true,
-    double draggingWidgetOpacity = 0.2,
-  }) : super(
-          key: key,
-          header: header,
-          footer: footer,
-          children: children,
-          onReorder: onReorder,
-          onNoReorder: onNoReorder,
-          direction: Axis.vertical,
-          padding: padding,
-          buildItemsContainer:
-              (BuildContext context, Axis direction, List<Widget> children) {
-            return Flex(
-                direction: direction,
-                mainAxisAlignment: mainAxisAlignment,
-                mainAxisSize: mainAxisSize,
-                crossAxisAlignment: crossAxisAlignment,
-                textDirection: textDirection,
-                verticalDirection: verticalDirection,
-                textBaseline: textBaseline,
-                children: children);
-          },
-          buildDraggableFeedback: buildDraggableFeedback,
-          mainAxisAlignment: mainAxisAlignment,
-          scrollController: scrollController,
-          needsLongPressDraggable: needsLongPressDraggable,
-          draggingWidgetOpacity: draggingWidgetOpacity,
-        );
+  ReorderableColumn(
+      {Key key,
+      Widget header,
+      Widget footer,
+      ReorderCallback onReorder,
+      EdgeInsets padding,
+      MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
+      MainAxisSize mainAxisSize = MainAxisSize.max,
+      CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
+      TextDirection textDirection,
+      VerticalDirection verticalDirection = VerticalDirection.down,
+      TextBaseline textBaseline,
+      List<Widget> children = const <Widget>[],
+      BuildDraggableFeedback buildDraggableFeedback,
+      NoReorderCallback onNoReorder,
+      ScrollController scrollController,
+      bool needsLongPressDraggable = true,
+      double draggingWidgetOpacity = 0.2,
+      ScrollPhysics physics})
+      : super(
+            key: key,
+            header: header,
+            footer: footer,
+            children: children,
+            onReorder: onReorder,
+            onNoReorder: onNoReorder,
+            direction: Axis.vertical,
+            padding: padding,
+            buildItemsContainer:
+                (BuildContext context, Axis direction, List<Widget> children) {
+              return Flex(
+                  direction: direction,
+                  mainAxisAlignment: mainAxisAlignment,
+                  mainAxisSize: mainAxisSize,
+                  crossAxisAlignment: crossAxisAlignment,
+                  textDirection: textDirection,
+                  verticalDirection: verticalDirection,
+                  textBaseline: textBaseline,
+                  children: children);
+            },
+            buildDraggableFeedback: buildDraggableFeedback,
+            mainAxisAlignment: mainAxisAlignment,
+            scrollController: scrollController,
+            needsLongPressDraggable: needsLongPressDraggable,
+            draggingWidgetOpacity: draggingWidgetOpacity,
+            physics: physics);
 }
